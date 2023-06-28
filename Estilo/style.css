@@ -33,3 +33,17 @@ body{
 #operations{
     text-align: right;
 }
+
+#previous-operations{
+    color: #777;
+    padding: .2em;
+    overflow-wrap: break-word;
+    min-height: 1.6em;
+}
+
+#corrent-operation{
+    color: #000;
+    padding: .2em;
+    overflow-wrap: break-word;
+    min-height: 1.6em;
+}
