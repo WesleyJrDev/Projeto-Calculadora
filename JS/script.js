@@ -9,8 +9,12 @@
 // Lógica de aplicação da Calculadora
 
   class Calculator{
-
-  }
+    constructor(previusOperationText, currrentOperationText){
+      this.previusOperationText = previusOperationText;
+      this.currrentOperationText = currrentOperationText;
+      this.currrentOperationText ="";
+    }
+  };
 
 // Eventos Utilizados
 
