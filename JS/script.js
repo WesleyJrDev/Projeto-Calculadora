@@ -12,18 +12,31 @@
     constructor(previusOperationText, currrentOperationText){
       this.previusOperationText = previusOperationText;
       this.currrentOperationText = currrentOperationText;
-      this.currrentOperationText ="";
+      this.currrentOperation ="";
+    }
+
+     // adiciona digit a tela da calculadora
+     addDigit(digit) {
+      this.currrentOperation = digit;
+      this.updateScreen()
+     }
+
+    //  Mudar valores da tela da calculadora
+    updateScreen() {
+      this.currrentOperationText.innerText += this.currrentOperation;
     }
   };
 
+  const calc = new Calculator(previusOperationText, currrentOperationText);
+
 // Eventos Utilizados
 
-   buttons.forEach((btn)=> {
+   buttons.forEach((btn) => {
     btn.addEventListener("click",(e) => {
         const value = e.target.innerText;
         
         if (+value >= 0 || value ==="."){
-          console.log(value);
+          calc.addDigit(value);
         } else {
           console.log("Op:" + value);
         }
